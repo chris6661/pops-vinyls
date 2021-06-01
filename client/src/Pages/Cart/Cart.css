@@ -1,15 +1,75 @@
-/**
- * Copyright 2021 Admin
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *     http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+.cart {
+  display: flex;
+  max-width: 1300px;
+  margin: 2rem auto;
+}
+
+.cart h2 {
+  margin-bottom: 1rem;
+}
+
+.cart__left {
+  flex: 0.7;
+  margin-right: 1rem;
+  background: transparent;
+  padding: 1rem;
+}
+
+.cart__right {
+  flex: 0.3;
+  background: #fff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+  height: fit-content;
+}
+
+.cart__right div {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.cart__info p {
+  padding: 8px;
+}
+
+.cart__info p:first-child {
+  font-weight: bold;
+}
+
+.cart__right div:last-child {
+  border: none;
+}
+
+.cart__right div button {
+  padding: 10px 17px;
+  width: 100%;
+  background: #171717;
+  color: #f4f4f4;
+  border: 1px solid #171717;
+  cursor: pointer;
+}
+
+.cart__right div button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 1320px) {
+  .cart {
+    max-width: 900px;
+  }
+}
+
+@media (max-width: 960px) {
+  .cart {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 960px) {
+  .cart {
+    flex-direction: column;
+  }
+
+  .cart__right {
+    margin: 1rem;
+  }
+}

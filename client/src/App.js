@@ -1,22 +1,28 @@
-import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'; 
+import "./App.css";
+import { useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from './Pages/Home/Home'; 
-import Product from './Pages/Product/Product'; 
-import Cart from './Pages/Cart/Cart'; 
+import Navbar from "./components/Navbar";
+import SideMenu from "./components/SideMenu";
+import Background from "./components/Background";
 
-import Navbar from './components/Navbar/Navbar'; 
+import Home from "./screens/Home";
+import Product from "./screens/Product";
+import Cart from "./screens/Cart";
+
 function App() {
+  const [sideToggle, setSideToggle] = useState(false);
+
   return (
     <Router>
-      <Navbar />
-      {/* SideMenu */}
-      {/* Background */}
-      <main>
+      <Navbar click={() => setSideToggle(true)} />
+      <SideMenu show={sideToggle} click={() => setSideToggle(false)} />
+      <Background show={sideToggle} click={() => setSideToggle(false)} />
+      <main className="app">
         <Switch>
-          <Route exact path = "/" component = {Home} />
-          <Route exact path = "/product/:id" component = {Product} />
-          <Route exact path = "/cart" component = {Cart} />
+          <Route exact path="/" component={Home} />
+          <Route exact path="/product/:id" component={Product} />
+          <Route exact path="/cart" component={Cart} />
         </Switch>
       </main>
     </Router>

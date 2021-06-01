@@ -1,13 +1,39 @@
-// Copyright 2021 Admin
-// 
-// Licensed under the Apache License, Version 2.0 (the "License");
-// you may not use this file except in compliance with the License.
-// You may obtain a copy of the License at
-// 
-//     http://www.apache.org/licenses/LICENSE-2.0
-// 
-// Unless required by applicable law or agreed to in writing, software
-// distributed under the License is distributed on an "AS IS" BASIS,
-// WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-// See the License for the specific language governing permissions and
-// limitations under the License.
+import "./SideMenu.css";
+import { Link } from "react-router-dom";
+import { useSelector } from "react-redux";
+
+const SideMenu = ({ show, click }) => {
+  const SideMenuClass = ["SideMenu"];
+
+  const cart = useSelector((state) => state.cart);
+  const { cartItems } = cart;
+
+  const getCartCount = () => {
+    return cartItems.reduce((qty, item) => Number(item.qty) + qty, 0);
+  };
+
+  if (show) {
+    SideMenuClass.push("show");
+  }
+
+  return (
+    <div className={SideMenuClass.join(" ")}>
+      <ul className="SideMenu__links" onClick={click}>
+        <li>
+          <Link to="/cart">
+            <i className="fas fa-shopping-cart"></i>
+            <span>
+              Cart{" "}
+              <span className="SideMenu__cartbadge">{getCartCount()}</span>
+            </span>
+          </Link>
+        </li>
+        <li>
+          <Link to="/">Shop</Link>
+        </li>
+      </ul>
+    </div>
+  );
+};
+
+export default SideMenu;

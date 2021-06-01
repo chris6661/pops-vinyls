@@ -1,15 +1,77 @@
-/**
- * Copyright 2021 Admin
- * 
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
- * 
- *     http://www.apache.org/licenses/LICENSE-2.0
- * 
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
- */
+  
+.sidemenu {
+    width: 70%;
+    background: #fff;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    transform: translateX(-100%);
+    transition: all 0.3s ease-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .sidemenu.show {
+    transform: translateX(0);
+  }
+  
+  .sidemenu__links {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+  }
+  
+  .sidemenu__links > li {
+    display: flex;
+    align-items: center;
+  }
+  
+  .sidemenu__links > li > a:hover {
+    background: #333;
+    color: #f4f4f4;
+  }
+  
+  .sidemenu__links > li > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+    padding: 1rem;
+    text-decoration: none;
+    color: #171717;
+    font-size: 1.6rem;
+  }
+  
+  .sidemenu__links > li > a > span {
+    display: flex;
+    align-items: center;
+    margin-left: 8px;
+  }
+  
+  .sidemenu__cartbadge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #171717;
+    border-radius: 50%;
+    margin-left: 8px;
+    color: #fff;
+    font-size: 1rem;
+  }
+  
+  .sidemenu__links > li > a:hover .sidemenu__cartbadge {
+    background-color: #fff;
+    color: #171717;
+  }
+  
+  @media (min-width: 960px) {
+    .sidemenu {
+      display: none;
+    }
+  }
