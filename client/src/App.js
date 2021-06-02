@@ -2,13 +2,13 @@ import "./App.css";
 import { useState } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Navbar from "./components/Navbar";
-import SideMenu from "./components/SideMenu";
-import Background from "./components/Background";
+import Navbar from "./components/Navbar/Navbar";
+import SideMenu from "./components/SideMenu/SideMenu";
+import Background from "./components/Background/Background";
 
-import Home from "./screens/Home";
-import Product from "./screens/Product";
-import Cart from "./screens/Cart";
+import Home from "./Pages/Home";
+import Product from "./Pages/Product";
+import Cart from "./Pages/Cart";
 
 function App() {
   const [sideToggle, setSideToggle] = useState(false);
