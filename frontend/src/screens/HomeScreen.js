@@ -1,6 +1,10 @@
 import "./HomeScreen.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import Auth from "../utils/auth";
+import { useParams } from "react-router-dom";
+import { QUERY_ME, QUERY_USER } from "../utils/queries";
+import { useQuery } from "@apollo/react-hooks";
 
 // Components
 import Product from "../components/Product";
@@ -9,6 +13,14 @@ import Product from "../components/Product";
 import { getProducts as listProducts } from "../redux/actions/productActions";
 
 const HomeScreen = () => {
+  // gets username after logged in
+  const loggedIn = Auth.loggedIn();
+  const { username: userParam } = useParams();
+  const { data } = useQuery(userParam ? QUERY_USER : QUERY_ME, {
+    variables: { username: userParam },
+  });
+  const user = data?.me || data?.user || {};
+
   const dispatch = useDispatch();
 
   const getProducts = useSelector((state) => state.getProducts);
@@ -20,13 +32,27 @@ const HomeScreen = () => {
 
   return (
     <div className="homescreen">
+      <div className="flex-row justify-space-between">
+        {!loggedIn && (
+          <div className="col-12 mb-3">
+          <h1 className="uppercase">Login to get started</h1>
+          </div>
+        )}
+      </div>
+
+      <div className="flex-row justify-space-between">
+        {loggedIn && (
+          <h1 className="uppercase">Welcome {user.username}</h1>
+        )}
+        {loggedIn && (
       <h2 className="homescreen__title">Latest Products</h2>
+      )}
       <div className="homescreen__products">
         {loading ? (
           <h2>Loading...</h2>
         ) : error ? (
           <h2>{error}</h2>
-        ) : (
+        ) : loggedIn && (
           products.map((product) => (
             <Product
               key={product._id}
@@ -38,6 +64,7 @@ const HomeScreen = () => {
             />
           ))
         )}
+      </div>
       </div>
     </div>
   );

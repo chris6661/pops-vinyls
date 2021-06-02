@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+.uppercase{
+  text-transform: uppercase;
+  text-align: center;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #f4f4f4;
