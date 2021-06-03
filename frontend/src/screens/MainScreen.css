@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.homescreen {
+  max-width: 1300px;
+  margin: 1rem auto;
+}
+
+.homescreen__title {
+  font-size: 1.5rem;
+  color: #ffa500;
+  margin-bottom: 1rem;
+  margin-left: 8px;
+}
+
+.homescreen__products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.test {
+  font-size: calc(20px + 18vh);
+  line-height: calc(20px + 20vh);
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+font-family: "Sacramento", cursive;
+text-align: center;
+animation: blink 12s infinite;
+-webkit-animation: blink 12s infinite;
+}
+
+body {
+  padding: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #222;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 7px,
+    rgba(0, 0, 0, 0.8) 9px,
+    rgba(0, 0, 0, 0.8) 13px,
+    transparent 13px
+  );
+}
+
+@-webkit-keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+.test2 {
+    color: #fff;
+    text-shadow:
+        0 0 21px #fff,
+        0 0 42px #ffa500,
+        0 0 82px #ffa500,
+        0 0 92px #ff8d00,
+        0 0 102px #ff8d00,
+        0 0 151px #ff8d00;
+}
+
+
+@media (max-width: 1232px) {
+  .homescreen__products {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media (max-width: 950px) {
+  .homescreen__products {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media (max-width: 630px) {
+  .homescreen__products {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,6 +1,5 @@
 .navbar {
   width: 100%;
-  background-color: #171717;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,6 +11,13 @@
   color: #f4f4f4;
   font-size: 1.4rem;
   cursor: pointer;
+  text-shadow:
+      0 0 21px #fff,
+      0 0 42px #ffa500,
+      0 0 82px #ffa500,
+      0 0 92px #ff8d00,
+      0 0 102px #ff8d00,
+      0 0 151px #ff8d00;
 }
 
 .navbar__links {
@@ -45,8 +51,8 @@
 }
 
 .cart__link:hover {
-  background: #dd219e;
-  color: #f4f4f4;
+  background: #ff9100;
+  color: #000000;
 }
 
 .cartlogo__badge {
@@ -60,6 +66,18 @@
   justify-content: center;
   align-items: center;
   font-size: 1rem;
+}
+
+.text-center {
+  color: #f4f4f4;
+  font-size: 1.4rem;
+  text-shadow:
+  0 0 21px #fff,
+  0 0 42px #ffa500,
+  0 0 82px #ffa500,
+  0 0 92px #ff8d00,
+  0 0 102px #ff8d00,
+  0 0 151px #ff8d00;
 }
 
 .hamburger__menu {

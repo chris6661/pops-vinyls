@@ -37,10 +37,10 @@ const ProductScreen = ({ match, history }) => {
               <img src={product.imageUrl} alt={product.name} />
             </div>
             <div className="left__info">
-              <p className="left__name">Justin Bieber Record</p>
+              <p className="left__name">{product.name}</p> 
               <p>Price: ${product.price}</p>
               <p>Description: {product.description}</p>
-              <a href="https://chris6661.github.io/Lyrically/">Baby</a>
+              <a href="https://chris6661.github.io/Lyrically/">Search here to look for songs!</a>
             </div>
           </div>
           <div className="productscreen__right">

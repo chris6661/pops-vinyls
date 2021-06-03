@@ -1,4 +1,4 @@
-import "./HomeScreen.css";
+import "./MainScreen.css";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import Auth from "../utils/auth";
@@ -12,7 +12,7 @@ import Product from "../components/Product";
 //Actions
 import { getProducts as listProducts } from "../redux/actions/productActions";
 
-const HomeScreen = () => {
+const MainScreen = () => {
   // gets username after logged in
   const loggedIn = Auth.loggedIn();
   const { username: userParam } = useParams();
@@ -35,17 +35,17 @@ const HomeScreen = () => {
       <div className="flex-row justify-space-between">
         {!loggedIn && (
           <div className="col-12 mb-3">
-          <h1 className="uppercase">Login to get started</h1>
+          <h1 className="test">Pop's Vinyls</h1>
           </div>
         )}
       </div>
 
       <div className="flex-row justify-space-between">
         {loggedIn && (
-          <h1 className="uppercase">Welcome {user.username}</h1>
+          <h1 className="test">Welcome {user.username}</h1>
         )}
         {loggedIn && (
-      <h2 className="homescreen__title">Latest Products</h2>
+      <h2 className="test2">Latest Products</h2>
       )}
       <div className="homescreen__products">
         {loading ? (
@@ -70,4 +70,4 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default MainScreen;
