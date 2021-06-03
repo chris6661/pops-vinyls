@@ -45,7 +45,7 @@ const MainScreen = () => {
           <h1 className="test">Welcome {user.username}</h1>
         )}
         {loggedIn && (
-      <h2 className="homescreen__title">Latest Products</h2>
+      <h2 className="test2">Latest Products</h2>
       )}
       <div className="homescreen__products">
         {loading ? (

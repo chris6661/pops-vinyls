@@ -1,7 +1,6 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import starbucks from "../starbucks.jpg"
 import Auth from '../utils/auth';
 
 const Navbar = ({ click }) => {
@@ -19,8 +18,7 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-      <img height="100px" width="100px" src={starbucks} alt="logo"/>
-        <Link to="/"><h2>Lies & Deciet</h2></Link>
+        <Link to="/"><h2>Home</h2></Link>
       </div>
 
       <ul className="navbar__links">
