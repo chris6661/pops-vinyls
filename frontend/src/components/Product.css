@@ -41,7 +41,7 @@
   display: block;
   text-decoration: none;
   text-align: center;
-  color: #171717;
+  color: #262626;
   width: 100%;
   padding: 8px 16px;
   background-color: #f4f4f4;
@@ -52,6 +52,10 @@
 .info__button:hover {
   background: rgb(99, 99, 99);
   color: #f4f4f4;
+}
+
+.info__button:visited {
+  color: #171717;
 }
 
 @media (max-width: 1232px) {
