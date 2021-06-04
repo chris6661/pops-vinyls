@@ -18,7 +18,7 @@ const Navbar = ({ click }) => {
   return (
     <nav className="navbar">
       <div className="navbar__logo">
-        <Link to="/"><h2>Home</h2></Link>
+        <Link to="/"><h2>Pop's Vinyls</h2></Link>
       </div>
 
       <ul className="navbar__links">

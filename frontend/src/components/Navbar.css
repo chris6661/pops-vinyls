@@ -8,16 +8,16 @@
 }
 
 .navbar__logo h2 {
-  color: #f4f4f4;
-  font-size: 1.4rem;
+  color: #fffbe7;
+  font-size: 2.5rem;
   cursor: pointer;
   text-shadow:
-      0 0 21px #fff,
-      0 0 42px #ffa500,
-      0 0 82px #ffa500,
+      0 0 15px #fff,
+      0 0 38px #ffa500,
+      0 0 75px #ffa500,
       0 0 92px #ff8d00,
-      0 0 102px #ff8d00,
-      0 0 151px #ff8d00;
+      0 0 90px #ff8d00,
+      0 0 120px #ff8d00;
 }
 
 .navbar__text {
@@ -49,12 +49,19 @@
   font-size: 1.2rem;
   display: flex;
   align-items: center;
+  border: 2px solid #f4f4f4;
 }
 
 .navbar__links > li > a > span {
   display: flex;
   align-items: center;
   margin-left: 8px;
+}
+
+.navbar__links > li > a:hover {
+  color: #333;
+  background: #f4f4f4;
+  background-color: none;
 }
 
 .cart__link {
