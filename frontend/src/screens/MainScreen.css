@@ -15,17 +15,18 @@
 .homescreen__products {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  background: #222;
 }
 
 .test {
-  font-size: calc(20px + 18vh);
-  line-height: calc(20px + 20vh);
+  font-size: calc(25px + 8vh);
+  line-height: calc(20px + 10vh);
   text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
   color: #fff6a9;
-font-family: "Sacramento", cursive;
-text-align: center;
-animation: blink 12s infinite;
--webkit-animation: blink 12s infinite;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 8s infinite;
+  -webkit-animation: blink 12s infinite;
 }
 
 body {
@@ -88,13 +89,7 @@ body {
 
 .test2 {
     color: #fff;
-    text-shadow:
-        0 0 21px #fff,
-        0 0 42px #ffa500,
-        0 0 82px #ffa500,
-        0 0 92px #ff8d00,
-        0 0 102px #ff8d00,
-        0 0 151px #ff8d00;
+    padding: 2px;
 }
 
 
