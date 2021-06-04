@@ -23,30 +23,44 @@ const Navbar = ({ click }) => {
 
       <ul className="navbar__links">
         <li>
+        {Auth.loggedIn() ? (
           <Link to="/cart" className="cart__link">
             <i className="fas fa-shopping-cart"></i>
             <span>
               Cart <span className="cartlogo__badge">{getCartCount()}</span>
             </span>
           </Link>
+        ) : (
+          <>
+          </>
+        )}
         </li>
-      </ul>
-
-      <nav className="text-center">
-          {Auth.loggedIn() ? (
+        
+        <li>
+        {Auth.loggedIn() ? (
             <>
-              <Link to="/">Me</Link>
-              <a href="/" onClick={logout}>
+              <a className="navbar__text" href="/" onClick={logout}>
                 Logout
               </a>
             </>
           ) : (
             <>
-              <Link to="/login">Login</Link>
-              <Link to="/signup">Signup</Link>
+              <Link className="navbar__text" to="/login">Login</Link>
             </>
           )}
-        </nav>
+        </li>
+        <li>
+        {Auth.loggedIn() ? (
+            <>
+            </>
+          ) : (
+            <>
+              <Link className="navbar__text" to="/signup">Signup</Link>
+            </>
+          )}
+        </li>
+      </ul>
+
       <div className="hamburger__menu" onClick={click}>
         <div></div>
         <div></div>

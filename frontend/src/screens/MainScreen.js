@@ -42,10 +42,13 @@ const MainScreen = () => {
 
       <div className="flex-row justify-space-between">
         {loggedIn && (
-          <h1 className="test">Welcome {user.username}</h1>
+          <h1 className="test col-12">Welcome {user.username}</h1>
         )}
         {loggedIn && (
-      <h2 className="test2">Latest Products</h2>
+      <br></br>
+      )}
+        {loggedIn && (
+      <h2 className="test2 col-12">Latest Products</h2>
       )}
       <div className="homescreen__products">
         {loading ? (
