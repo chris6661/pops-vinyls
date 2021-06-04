@@ -12,14 +12,28 @@
 .left__image {
   margin: 1rem;
   flex: 0.6;
+
 }
 
 .left__info {
   margin: 1rem;
+  padding: 0.5rem;
   flex: 0.4;
-  background: #fff;
+  color: #f4f4f4;
+  background: #333;
   height: fit-content;
   font-size: 0.9rem;
+  border: 2px solid #f4f4f4;
+  border-radius: 8px;
+}
+
+.left__info > a {
+  color: orange;
+  padding: 1rem;
+}
+
+.left__info > a:hover {
+  color: #f4f4f4;
 }
 
 .left__name {
@@ -30,7 +44,7 @@
 .left__info > p,
 .right__info > p {
   padding: 1rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.624);
 }
 
 .left__info > p:last-child,
