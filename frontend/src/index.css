@@ -138,7 +138,7 @@ nav a:hover {
   border: none;
   color: var(--dark);
   outline: none;
-  background-color: var(--secondary);
+  background-color: orange;
   transition: all 0.5s;
 }
 
@@ -157,14 +157,12 @@ nav a:hover {
   margin: 0 0 20px 0;
   border: 3px solid var(--dark);
   border-radius: var(--border-radius);
-  background-color: var(--light);
   color: var(--dark);
 }
 
 .card-header {
-  color: var(--secondary);
+  color: orange;
   margin: 0;
-  background-color: var(--dark);
   padding: 0.625rem;
   border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
 }
